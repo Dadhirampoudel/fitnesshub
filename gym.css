@@ -1,0 +1,282 @@
+*{
+margin: 0%;
+padding: 0%;
+}
+body{
+    background-image: url("bg.jpg");
+    background-size: 100%;
+    color: white;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+nav h1{
+    font-size: 40px;
+    cursor: pointer;
+}
+nav h1 .HUB {
+    color: red;
+}
+
+ul button{
+    /* width: 100px; */
+    height: 34px;
+    background-color: rgb(224, 11, 11);
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+
+
+
+  width: 130px;
+  /* height: 40px; */
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+
+}
+
+ul button:hover{
+    background-color: #2980b9;
+}
+ul{
+    display: flex;
+}
+
+ul li {
+    list-style-type :none
+}
+ul li a{
+    margin-inline: 30px;
+    font-size: 25px;
+    position: relative;
+    text-decoration: none;
+    /* border-bottom: 3px solid rgb(67, 67, 233); */
+    font-weight: bold;
+    cursor: pointer;
+
+    
+
+}
+ul li a:hover{
+    /* border-bottom: 3px solid rgb(67, 67, 233);
+    border-radius: 3px;
+    margin-top: 2px;
+    cursor: pointer; */
+}
+
+
+
+ul li a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+}
+
+ul li a:hover::before {
+    width: 100%;
+}
+
+.text{
+    margin-left: 7%;
+    margin-top: 120px;
+}
+
+.text h1{
+    font-size: 68px;
+    /* font-family: Helvetica Bold; */
+}
+
+.text p{
+    font-size: 20px;
+}
+
+.text button{
+    width: 140px;
+    /* font-size: 50px; */
+    height: 40px;
+    /* background-color: red; */
+    background-color: #3498db;
+    color: white;
+    border: none;
+    margin-top: 50px;
+    font-size: 23px;
+    border-radius: 5px; 
+
+    /* width: 170px;
+    font-size: 100px;
+    height: 44px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; */
+    
+}
+.text button:hover{
+    /* border: 3px solid white; */
+    /* background-color: #2980b9; */
+    cursor: pointer;
+    /* background-color: #2980b9; */
+}
+.hub{
+    color: black;
+    background-color: #F79A24;
+    border-radius: 5px;
+}
+.dadhi{
+    color: black;
+    background-color: #F79A24;
+    border-radius: 15px;
+    /* border-radius: 5px; */
+}
+
+
+
+/* suggested by chat gpt */
+
+/* Add this to your existing CSS */
+/* .fixed-corner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    background-color: #3498db;
+    color: white;
+    width: 250px;
+    text-align: center;
+  }
+  
+  .fixed-corner-content {
+    font-size: 18px;
+  }
+  
+  .fixed-corner-content p {
+    margin-bottom: 10px;
+  }
+  
+  .fixed-corner-content button {
+    width: 150px;
+    height: 40px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .fixed-corner-content button:hover {
+    background-color: #2471a3;
+  } */
+  
+
+  /* Add this to your existing CSS */
+footer {
+    /* background-color: #3498db; */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 15px;
+  }
+
+
+
+  /* Your existing CSS */
+
+footer {
+    /* background-color: #3498db; */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 12px;
+  }
+  
+  .social-links a,
+  .contact-info p {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+   
+  }
+
+  .social-links a{
+    size: 10px;
+  } 
+
+  .social-links a:hover {
+    color: red;
+
+  }
+  
+  .fixed-corner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    background-color: #3498db;
+    color: white;
+    width: 250px;
+    text-align: center;
+  }
+  
+  .fixed-corner-content {
+    font-size: 18px;
+  }
+  
+  .fixed-corner-content p {
+    margin-bottom: 10px;
+  }
+  
+  .fixed-corner-content button {
+    width: 150px;
+    height: 40px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .fixed-corner-content button:hover {
+    background-color: #2471a3;
+  }
+  
+  .social-links a i.fab.fa-instagram {
+    font-size: 24px; 
+    /* color: #e4405f;  */
+}
+.links{
+    color: white;
+    text-decoration-line:none;
+}
+
+
+
+
+
+

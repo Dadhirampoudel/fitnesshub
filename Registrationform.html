@@ -1,0 +1,74 @@
+<!-- registration.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="Registrationform.css">
+  </head>
+  <body>
+    <div class="registration-form">
+      <h2>Register Now</h2>
+      <form name="submit-to-google-sheet">
+          <label for="fullName">Full Name:</label>
+          <input type="text" id="fullName" name="fullName" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required>
+
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+          </select>
+
+          <label for="birthdate">Date of Birth:</label>
+          <input type="date" id="birthdate" name="birthdate" required>
+
+          <label for="address">Address:</label>
+          <textarea id="address" name="address" required></textarea>
+
+          <label for="fitnessGoal">Fitness Goal:</label>
+          <input type="text" id="fitnessGoal" name="fitnessGoal" required>
+
+          <label for="experienceLevel">Fitness Experience Level:</label>
+          <select id="experienceLevel" name="experienceLevel" required>
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="advanced">Advanced</option>
+          </select>
+
+          <label for="membershipType">Membership Type:</label>
+          <select id="membershipType" name="membershipType" required>
+              <option value="basic">Basic</option>
+              <option value="premium">Premium</option>
+              <option value="elite">Elite</option>
+          </select>
+
+          <label for="agreeTerms">
+              <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+              I agree to the terms and conditions
+          </label>
+
+          <button type="submit">Submit</button>
+      </form>
+  </div>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyKJPXIuOc4bq3vTNf2VvjR3hg0iefrATDn_6y8BpBnPbNb7I3ByyvTTSfisbnEviWjRg/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
